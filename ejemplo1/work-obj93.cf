@@ -1,0 +1,7 @@
+v 4
+file . "tb_Ej1.vhd" "0f6b69b11590de7252979237cb91e8a948001f33" "20240331024122.655":
+  entity tb_ej1 at 1( 0) + 0 on 13;
+  architecture a of tb_ej1 at 8( 82) + 0 on 14;
+file . "Ej1.vhd" "f5d051e8dc5b243bf2339e7769ffb5d11c002da8" "20240331024110.547":
+  entity ej1 at 4( 45) + 0 on 11;
+  architecture rtl of ej1 at 22( 229) + 0 on 12;
