@@ -1,0 +1,13 @@
+v 4
+file . "tb_display_cyclone4.vhd" "7682fd6ead7e94d077cef956c7bd3fc22c0e1582" "20240420005503.239":
+  entity tb_display_cyclone4 at 1( 0) + 0 on 21;
+  architecture logic of tb_display_cyclone4 at 8( 108) + 0 on 22;
+file . "tb_display_cyclone2.vhd" "c886a3e6fefba0530fec02621d4f8e0b276eb233" "20240420003346.408":
+  entity tb_display_cyclone2 at 1( 0) + 0 on 17;
+  architecture logic of tb_display_cyclone2 at 8( 108) + 0 on 18;
+file . "display_cyclone2.vhd" "dff51ccd0e600ee7275d20f00b3efe4fd3275bc7" "20240420003341.475":
+  entity display_cyclone2 at 1( 0) + 0 on 15;
+  architecture logic of display_cyclone2 at 13( 279) + 0 on 16;
+file . "display_cyclone4.vhd" "1bdd919ac5166d98d749d9672553322c56f94b59" "20240420005455.394":
+  entity display_cyclone4 at 1( 0) + 0 on 19;
+  architecture logic of display_cyclone4 at 13( 279) + 0 on 20;

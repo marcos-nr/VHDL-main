@@ -24,5 +24,5 @@ ARCHITECTURE logic of tp1_2 is
     END COMPONENT;
 
 begin
-    A1: conta GENERIC MAP (0, 8) PORT MAP (clk_50,'0','1',led,OPEN);
+    A1: conta GENERIC MAP (0, 12) PORT MAP (clk_50,'0','1',led,OPEN);
 end architecture;
