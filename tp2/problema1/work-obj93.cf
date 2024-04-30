@@ -1,0 +1,13 @@
+v 4
+file . ".\display_cyclone2.vhd" "dff51ccd0e600ee7275d20f00b3efe4fd3275bc7" "20240425150710.038":
+  entity display_cyclone2 at 1( 0) + 0 on 71;
+  architecture logic of display_cyclone2 at 13( 279) + 0 on 72;
+file . ".\tb_tp2_1.vhd" "811a9c2bed81bb48e0e315e64832add974646dec" "20240429230655.708":
+  entity tb_tp2_1 at 1( 0) + 0 on 75;
+  architecture rtl of tb_tp2_1 at 8( 111) + 0 on 76;
+file . ".\Antirrebote2.vhd" "c166c98e112409026909e9494c7020224f201dbe" "20240425150656.531":
+  entity antirrebote2 at 1( 0) + 0 on 69;
+  architecture behavioral of antirrebote2 at 12( 305) + 0 on 70;
+file . "tp2_1.vhd" "997bccebc054b6aad1b840208016e774d71722cd" "20240429230514.643":
+  entity tp2_1 at 1( 0) + 0 on 73;
+  architecture logic of tp2_1 at 19( 437) + 0 on 74;
