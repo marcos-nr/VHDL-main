@@ -14,8 +14,9 @@ entity tp2_2 is
         reset: IN STD_LOGIC;
         led_uv: OUT STD_LOGIC := '0';
         led_rojo: OUT STD_LOGIC := '0';
-        led_conta: OUT STD_LOGIC := '0';
-        segmentos: OUT STD_LOGIC_VECTOR (6 DOWNTO 0) := "1111110"
+        --led_conta: OUT STD_LOGIC := '0';
+        segmentos: OUT STD_LOGIC_VECTOR (6 DOWNTO 0) := "1111110";
+		  enable_display: OUT STD_LOGIC
     );
 end tp2_2;
 
@@ -53,8 +54,8 @@ architecture rtl of tp2_2 is
     SIGNAL enable_conta, reset_conta: STD_LOGIC;
     SIGNAL bcd: STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000"; --codigo bcd que se usa en el 7 segmentos
     SIGNAL cuenta: INTEGER RANGE 0 TO max_clk; --cuenta que devuelve el contador divisor de frecuencia
-    SIGNAL enable_display: STD_LOGIC;
     SIGNAL segundos: INTEGER RANGE min_count TO max_count := 0;
+	 SIGNAL led_conta: STD_LOGIC := '0';
 
 begin
     A: Antirrebote2 PORT MAP (clk, start, debounced_start);
@@ -62,25 +63,31 @@ begin
 
     PROCESS (clk, debounced_start, debounced_recet)
     BEGIN
-        if (falling_edge(debounced_recet) or segundos = max_count) then
-            enable_conta <= '0';
-            reset_conta <= '1';
-            segundos <= 0;
-        end if;
-
-        if (falling_edge(debounced_start)) then
-            enable_conta <= '1';
-            reset_conta <= '0';
-        end if;
-
         if (rising_edge(clk)) then
+            if (debounced_recet = '0') then -- LA PLACA CYCLONE 2 TIENE LOS BOTONES SIEMPRE EN '1'
+                enable_conta <= '0';
+                reset_conta <= '1';
+                segundos <= 0;
+            end if;
+
+            if (segundos = max_count) then
+                enable_conta <= '0';
+                reset_conta <= '1';
+                segundos <= 0;
+            end if;
+
+            if (debounced_start='0') then -- LA PLACA CYCLONE 2 TIENE LOS BOTONES SIEMPRE EN '1'
+                enable_conta <= '1';
+                reset_conta <= '0';
+            end if;
+
             if(cuenta = max_clk-1) then
                 segundos <= segundos + 1;
             end if;
-        end if;
 
-        led_rojo <= not enable_conta;
-        led_uv <= enable_conta;
+            led_rojo <= not enable_conta;
+            led_uv <= enable_conta;
+        end if;
     END PROCESS;
     
     C: conta GENERIC MAP(0, max_clk) PORT MAP (clk,reset_conta,enable_conta,led_conta,cuenta);
