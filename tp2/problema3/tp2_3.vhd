@@ -43,8 +43,7 @@ architecture rtl of tp2_3 is
     COMPONENT display_cyclone2
         port (
             segmentos: out STD_LOGIC_VECTOR(6 DOWNTO 0);
-            bcd: in STD_LOGIC_VECTOR(3 DOWNTO 0);
-            enable: out STD_LOGIC
+            bcd: in STD_LOGIC_VECTOR(3 DOWNTO 0)
         );
     END COMPONENT;
 
@@ -70,10 +69,7 @@ begin
     A: Antirrebote2 PORT MAP (clk, reset, debounced_reset);
     B: conta GENERIC MAP(0, max_clk) PORT MAP (clk,debounced_reset,enable_conta,open,cuenta);
 
-    D0: display_cyclone2 PORT MAP (segmentos, bcd, enable_disp(0));
-    D1: display_cyclone2 PORT MAP (segmentos, bcd, enable_disp(1));
-    D2: display_cyclone2 PORT MAP (segmentos, bcd, enable_disp(2));
-    D3: display_cyclone2 PORT MAP (segmentos, bcd, enable_disp(3));
+    D: display_cyclone2 PORT MAP (segmentos, bcd);
 
 	process (clk, debounced_reset)
 	begin

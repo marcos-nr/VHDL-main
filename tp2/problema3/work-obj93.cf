@@ -1,16 +1,16 @@
 v 4
-file . "tb_tp2_3.vhd" "46e2f303882d73a827394e0f17a68ada8e925354" "20240427235644.708":
-  entity tb_tp2_3 at 1( 0) + 0 on 25;
-  architecture rtl of tb_tp2_3 at 8( 111) + 0 on 26;
-file . "display_cyclone2.vhd" "dff51ccd0e600ee7275d20f00b3efe4fd3275bc7" "20240427232043.978":
-  entity display_cyclone2 at 1( 0) + 0 on 15;
-  architecture logic of display_cyclone2 at 13( 279) + 0 on 16;
-file . "conta.vhd" "1bcfdf6f0731b94cc85489cd42389cdf8b7bbbaf" "20240427234629.424":
-  entity conta at 1( 0) + 0 on 21;
-  architecture rtl of conta at 16( 346) + 0 on 22;
-file . "Antirrebote2.vhd" "c166c98e112409026909e9494c7020224f201dbe" "20240427232043.974":
-  entity antirrebote2 at 1( 0) + 0 on 11;
-  architecture behavioral of antirrebote2 at 12( 305) + 0 on 12;
-file . "tp2_3.vhd" "9a22feed43aeb7dba49d984d21238b694294f049" "20240428000108.871":
-  entity tp2_3 at 9( 326) + 0 on 27;
-  architecture rtl of tp2_3 at 27( 674) + 0 on 28;
+file . "tp2_3.vhd" "9f38bfbc7e91c970900e125a69cffee7ed83e3d6" "20240430181904.316":
+  entity tp2_3 at 9( 326) + 0 on 35;
+  architecture rtl of tp2_3 at 27( 674) + 0 on 36;
+file . "Antirrebote2.vhd" "c166c98e112409026909e9494c7020224f201dbe" "20240430181904.310":
+  entity antirrebote2 at 1( 0) + 0 on 33;
+  architecture behavioral of antirrebote2 at 12( 305) + 0 on 34;
+file . "conta.vhd" "1bcfdf6f0731b94cc85489cd42389cdf8b7bbbaf" "20240430181904.309":
+  entity conta at 1( 0) + 0 on 29;
+  architecture rtl of conta at 16( 346) + 0 on 30;
+file . "display_cyclone2.vhd" "6371ad960f9451d2115cf577abf84e33b5afb7bd" "20240430181904.310":
+  entity display_cyclone2 at 1( 0) + 0 on 31;
+  architecture logic of display_cyclone2 at 12( 247) + 0 on 32;
+file . "tb_tp2_3.vhd" "ed1b7d892ba8867d656bc671e64f554380862413" "20240430182806.258":
+  entity tb_tp2_3 at 1( 0) + 0 on 39;
+  architecture rtl of tb_tp2_3 at 8( 111) + 0 on 40;

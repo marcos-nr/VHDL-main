@@ -52,7 +52,7 @@ begin
         clk <= '0';
         wait for 10 ns;
         clk <= '1';
-        reset <= '1';
+        --reset <= '1';
         wait for 10 ns;
         clk <= '0';
         wait for 10 ns;

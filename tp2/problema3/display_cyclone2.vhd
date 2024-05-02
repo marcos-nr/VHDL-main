@@ -5,8 +5,7 @@ use ieee.numeric_std.all;
 entity display_cyclone2 is
     port (
         segmentos: out STD_LOGIC_VECTOR(6 DOWNTO 0);
-        bcd: in STD_LOGIC_VECTOR(3 DOWNTO 0);
-        enable: out STD_LOGIC
+        bcd: in STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
 end display_cyclone2;
 
@@ -15,7 +14,6 @@ architecture logic of display_cyclone2 is
     CONSTANT mem_deco: rom_deco:= ("1111110", "0110000", "1101101", "1111001", "0110011", "1011011", "1011111", "1110000",
     "1111111", "1111011", "1110111", "0011111", "1001110", "0111101", "1001111", "1000111");
 begin
-    enable <= '1';
     WITH bcd SELECT
         segmentos <= mem_deco(15) WHEN "0000",
                      mem_deco(14) WHEN "0001",
