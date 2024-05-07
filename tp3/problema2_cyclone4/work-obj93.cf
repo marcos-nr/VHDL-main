@@ -1,0 +1,19 @@
+v 4
+file . "conta.vhd" "1bcfdf6f0731b94cc85489cd42389cdf8b7bbbaf" "20240505001012.304":
+  entity conta at 1( 0) + 0 on 33;
+  architecture rtl of conta at 16( 346) + 0 on 34;
+file . "full_display4.vhd" "33450b8158b2aa9cabd1d576ffb787b9f1c8af1b" "20240505001012.304":
+  entity full_display4 at 9( 326) + 0 on 31;
+  architecture rtl of full_display4 at 28( 755) + 0 on 32;
+file . "display_cyclone4.vhd" "1d735dde13060dc84bc48be40a6f5045195bda9c" "20240505001012.303":
+  entity display_cyclone4 at 1( 0) + 0 on 29;
+  architecture logic of display_cyclone4 at 12( 247) + 0 on 30;
+file . "Antirrebote2.vhd" "c166c98e112409026909e9494c7020224f201dbe" "20240505001012.301":
+  entity antirrebote2 at 1( 0) + 0 on 27;
+  architecture behavioral of antirrebote2 at 12( 305) + 0 on 28;
+file . "tp3_2.vhd" "a68fc89264dda3d892c23693c8521332ec282085" "20240505045424.765":
+  entity tp3_2 at 1( 0) + 0 on 59;
+  architecture rtl of tp3_2 at 19( 436) + 0 on 60;
+file . "tb_tp3_2.vhd" "b96b047dfa54b1722eea3631230ca7e95cbf28b1" "20240505045424.763":
+  entity tb_tp3_2 at 1( 0) + 0 on 57;
+  architecture rtl of tb_tp3_2 at 8( 111) + 0 on 58;
