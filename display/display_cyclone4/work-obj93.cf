@@ -1,0 +1,22 @@
+v 4
+file . "tb_prueba.vhd" "cc6fafacdcceedc073d61377acff338267e9d03a" "20240504184400.472":
+  entity tb_prueba at 1( 0) + 0 on 33;
+  architecture rtl of tb_prueba at 8( 113) + 0 on 34;
+file . "display_cyclone4.vhd" "1d735dde13060dc84bc48be40a6f5045195bda9c" "20240504182303.626":
+  entity display_cyclone4 at 1( 0) + 0 on 29;
+  architecture logic of display_cyclone4 at 12( 247) + 0 on 30;
+file . "conta.vhd" "1bcfdf6f0731b94cc85489cd42389cdf8b7bbbaf" "20240504182303.626":
+  entity conta at 1( 0) + 0 on 27;
+  architecture rtl of conta at 16( 346) + 0 on 28;
+file . "Antirrebote2.vhd" "c166c98e112409026909e9494c7020224f201dbe" "20240504182303.624":
+  entity antirrebote2 at 1( 0) + 0 on 25;
+  architecture behavioral of antirrebote2 at 12( 305) + 0 on 26;
+file . "prueba.vhd" "bd42bf26417bb4ee41f1865034383b90e2c9a33c" "20240504183713.900":
+  entity prueba at 1( 0) + 0 on 31;
+  architecture rtl of prueba at 15( 401) + 0 on 32;
+file . "tp2_3.vhd" "961421aac7e22d1d69f0fe21f98dc37d7c2b843f" "20240504182109.353":
+  entity tp2_3 at 9( 326) + 0 on 21;
+  architecture rtl of tp2_3 at 28( 747) + 0 on 22;
+file . "tb_tp2_3.vhd" "e8087b53051b22c50bc1fd5ce6af8dd49cb0da46" "20240504182123.494":
+  entity tb_tp2_3 at 1( 0) + 0 on 23;
+  architecture rtl of tb_tp2_3 at 8( 111) + 0 on 24;
