@@ -1,4 +1,4 @@
--- Quartus II VHDL Template
+-- Quartus II VHDL Template.
 -- Signed Adder
 
 library ieee;

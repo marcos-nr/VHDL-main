@@ -29,6 +29,7 @@ begin
 
     process
     begin
+        reset <= '1';
         clk <= '0';
         wait for 10 ns;
         clk <= '1';

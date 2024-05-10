@@ -12,13 +12,13 @@ use ieee.numeric_std.all;
 
 entity tp2_3 is
     generic(
-        max_clk : integer := 50E6
+        max_clk : natural := 50E3
     );
 
 	port(
 		clk		    : in	std_logic;
 		reset       : in	std_logic;
-        enable_disp : out   std_logic_vector(3 downto 0);
+      enable_disp : out   std_logic_vector(3 downto 0);
 		segmentos   : out	std_logic_vector(6 downto 0)
 	);
 
@@ -27,8 +27,8 @@ end entity;
 architecture rtl of tp2_3 is
     component conta
         generic	(
-            MIN_COUNT : natural := 0;
-            MAX_COUNT : natural := 256
+            MIN_COUNT : natural;
+            MAX_COUNT : natural
         );
 
         port	(
@@ -61,20 +61,21 @@ architecture rtl of tp2_3 is
 	-- Register to hold the current state
 	signal state : state_type := s0;
     signal bcd: std_logic_vector(3 DOWNTO 0) := "0000";
-    signal cuenta: integer range 0 to max_clk;
-    signal debounced_reset: STD_LOGIC;
+    signal cuenta: natural range 0 to max_clk;
+    signal debounced_reset, clk_reset: STD_LOGIC;
     signal enable_conta: std_logic :='1';
 
 begin
+	clk_reset <= '0';
     A: Antirrebote2 PORT MAP (clk, reset, debounced_reset);
-    B: conta GENERIC MAP(0, max_clk) PORT MAP (clk,debounced_reset,enable_conta,open,cuenta);
+    B: conta GENERIC MAP(0, max_clk) PORT MAP (clk, clk_reset,enable_conta,open,cuenta);
 
     D: display_cyclone2 PORT MAP (segmentos, bcd);
 
 	process (clk, debounced_reset)
 	begin
 
-		if debounced_reset = '1' then
+		if debounced_reset = '0' then
 			state <= s0;
 
 		elsif (rising_edge(clk)) then
