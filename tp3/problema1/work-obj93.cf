@@ -1,7 +1,7 @@
 v 4
-file . "producto.vhd" "99f6423528625d9733a820b88da87071647d1495" "20240512193232.162":
-  entity producto at 1( 0) + 0 on 33;
-  architecture rtl of producto at 12( 214) + 0 on 34;
-file . "tb_tp3_1.vhd" "662ca63db8529fae7aff3cc3f553fc19afb21c4c" "20240512193834.566":
-  entity tb_tp3_1 at 1( 0) + 0 on 41;
-  architecture rtl of tb_tp3_1 at 9( 132) + 0 on 42;
+file . "producto.vhd" "8d59d60fc7790b819ed3dfcc2b64ee37bacc582c" "20240513022600.699":
+  entity producto at 1( 0) + 0 on 47;
+  architecture rtl of producto at 12( 214) + 0 on 48;
+file . "tb_tp3_1.vhd" "92436d0c4d0364834620ae11a55eeff51007af32" "20240513022604.028":
+  entity tb_tp3_1 at 1( 0) + 0 on 49;
+  architecture rtl of tb_tp3_1 at 9( 132) + 0 on 50;

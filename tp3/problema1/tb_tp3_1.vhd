@@ -35,10 +35,11 @@ begin
             x <= entrada;
             READ (buffer_in, entrada);
             y <= entrada;
+            wait for 10 ns; --se debe agregar un delay para que no se cero el primer valor de z
             salida := z;
             WRITE (buffer_out, salida);
             WRITELINE (output_file, buffer_out);
-            wait for 100 ns;
+            wait for 50 ns;
         END LOOP;
         FILE_CLOSE(input_file);
         FILE_CLOSE(output_file);
