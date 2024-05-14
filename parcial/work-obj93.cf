@@ -1,13 +1,13 @@
 v 4
-file . ".\display_cyclone4.vhd" "61be7fdd92e0b30102b34be2db6f3d5df667b328" "20240514152203.003":
-  entity display_cyclone4 at 1( 0) + 0 on 53;
-  architecture logic of display_cyclone4 at 13( 279) + 0 on 54;
-file . ".\conta.vhd" "1bcfdf6f0731b94cc85489cd42389cdf8b7bbbaf" "20240514152203.002":
-  entity conta at 1( 0) + 0 on 51;
-  architecture rtl of conta at 16( 346) + 0 on 52;
-file . ".\motor.vhd" "f8a2e822d6c7529185112d5e5975a90d804fd0fd" "20240514152202.995":
-  entity motor at 8( 236) + 0 on 47;
-  architecture rtl of motor at 27( 635) + 0 on 48;
-file . ".\tb_motor.vhd" "e184105d4c0ee08dddd1353571e46a2c54ba6bda" "20240514152203.000":
-  entity tb_motor at 1( 0) + 0 on 49;
-  architecture rtl of tb_motor at 8( 111) + 0 on 50;
+file . ".\tb_motor.vhd" "e184105d4c0ee08dddd1353571e46a2c54ba6bda" "20240514152724.448":
+  entity tb_motor at 1( 0) + 0 on 57;
+  architecture rtl of tb_motor at 8( 111) + 0 on 58;
+file . ".\motor.vhd" "f8a2e822d6c7529185112d5e5975a90d804fd0fd" "20240514152724.442":
+  entity motor at 8( 236) + 0 on 55;
+  architecture rtl of motor at 27( 635) + 0 on 56;
+file . ".\conta.vhd" "1bcfdf6f0731b94cc85489cd42389cdf8b7bbbaf" "20240514152724.451":
+  entity conta at 1( 0) + 0 on 59;
+  architecture rtl of conta at 16( 346) + 0 on 60;
+file . ".\display_cyclone4.vhd" "61be7fdd92e0b30102b34be2db6f3d5df667b328" "20240514152724.453":
+  entity display_cyclone4 at 1( 0) + 0 on 61;
+  architecture logic of display_cyclone4 at 13( 279) + 0 on 62;
