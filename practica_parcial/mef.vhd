@@ -65,7 +65,9 @@ begin
 	begin
         if (key_asc = '1') then
             secuencia <= asc;
-        elsif (key_desc = '1') then
+			end if;
+        
+		  if (key_desc = '1') then
             secuencia <= desc;
         end if;
 
@@ -77,25 +79,25 @@ begin
                     if secuencia = asc then
                         state <= s1;
                     else
-                        state <= s0;
+                        state <= s3;
                     end if;
 				when s1=>
 					if secuencia = asc then
 						state <= s2;
 					else
-						state <= s1;
+						state <= s0;
 					end if;
 				when s2=>
 					if secuencia = asc then
 						state <= s3;
 					else
-						state <= s2;
+						state <= s1;
 					end if;
 				when s3 =>
 					if secuencia = asc then
 						state <= s0;
 					else
-						state <= s3;
+						state <= s2;
 					end if;
 			end case;
 		end if;
@@ -112,7 +114,7 @@ begin
 			when s2 =>
 				bcd <= "0011";
 			when s3 =>
-				bcd <= "1100";
+				bcd <= "0100";
 		end case;
 	end process;
 
