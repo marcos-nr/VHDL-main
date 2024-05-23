@@ -22,13 +22,8 @@ Begin
 
 
 
---inst_cont: entity work.conta generic map (0,5208) 	port map( clk=>clk, reset=>'0', enable=>'1', cout=>clkis, q=>open);
---tx_uart(clk_delcontade 5208, cad)
--- al transmisor se manda el clock del conta con 5208 pulsos
---al proceso del for 11 veces el clock del proceso
---for() el clock del for debe ser 11*5208
---cadena = nombreapellido(i);
---i=i+1
+--inst_cont: entity work.conta generic map (0,434 ) 	port map( clk=>clk, reset=>'0', enable=>'1', cout=>clkis, q=>open);
+
 
 	process(clk,reset)
 	begin
