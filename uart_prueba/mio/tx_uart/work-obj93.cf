@@ -1,0 +1,7 @@
+v 4
+file . "tb_tx_uart.vhd" "5dae6005f47472ccf3957cfdb62883ca26581738" "20240526181559.244":
+  entity tb_tx_uart at 1( 0) + 0 on 97;
+  architecture rtl of tb_tx_uart at 8( 115) + 0 on 98;
+file . "tx_uart.vhd" "cce8855108744fb20dc949cafff0f1d5ae2f4f76" "20240526181559.244":
+  entity tx_uart at 1( 0) + 0 on 95;
+  architecture a_t_uart of tx_uart at 14( 281) + 0 on 96;
