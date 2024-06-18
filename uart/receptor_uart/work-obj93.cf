@@ -1,0 +1,4 @@
+v 4
+file . "receptor_uart_7s.vhd" "0eb288c57faa6acd63bcdf2d0ec4308bfe4f3cfd" "20240603234554.765":
+  entity receptor_uart_7s at 1( 0) + 0 on 11;
+  architecture rtl of receptor_uart_7s at 13( 291) + 0 on 12;
