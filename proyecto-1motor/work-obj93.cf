@@ -1,0 +1,13 @@
+v 4
+file . "SPI_master.vhd" "fab315dd58f6476efa72e2323cd4e4620169a415" "20240625234417.948":
+  entity spi_master at 1( 0) + 0 on 17;
+  architecture a_spi_master of spi_master at 18( 463) + 0 on 18;
+file . "pwm.vhd" "38613979f3373531c2064f9e1e1de383b09d4068" "20240625233334.001":
+  entity pwm at 1( 0) + 0 on 13;
+  architecture rtl of pwm at 19( 475) + 0 on 14;
+file . "conta.vhd" "60a9c1d52ea2297aab4801c248e865ff9be47885" "20240625233312.854":
+  entity conta at 1( 0) + 0 on 11;
+  architecture rtl of conta at 17( 378) + 0 on 12;
+file . "ADCModule.vhd" "0b5a91ca00c23d543eb5c43e3480e29b22cf4758" "20240625233510.995":
+  entity adcmodule at 1( 0) + 0 on 15;
+  architecture adcmodule_arc of adcmodule at 18( 587) + 0 on 16;

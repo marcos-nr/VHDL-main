@@ -10,9 +10,9 @@ port ( Clk   : IN  STD_LOGIC;
        oSCLK : OUT STD_LOGIC; --clock del adc
        iDOUT : IN  STD_LOGIC; --miso
        iCH   : IN  STD_LOGIC_VECTOR(2 downto 0);   -- aca elijo los canales
-       OutCkt: OUT STD_LOGIC_VECTOR(11 downto 0)); --salida de 12 bit
+       OutCkt: OUT STD_LOGIC_VECTOR(11 downto 0); --salida de 12 bit
 
-	   clk_adc: out std_logic:='0'; --agrego salida extra
+	   clk_adc: out std_logic:='0'  ); --agrego salida extra
 end entity;
 
 architecture ADCModule_arc of ADCModule is 
@@ -31,7 +31,7 @@ signal CH : std_LOGIC_VECTOR (2 downto 0) := "000";
 begin
 
 hz2: entity work.conta generic map (0,25) 
-	port map( clk=>clk, reset=>'0', enable=>'1', cout=>iCLK, coutnegado => iCLK_n, q=>open);
+	port map( clk=>clk, reset=>'0', enable=>'1', cout=>iCLK, q=>open);
 
 	clk_adc <= iCLK; -- agrego como salida
 

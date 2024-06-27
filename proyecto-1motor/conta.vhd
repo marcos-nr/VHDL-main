@@ -11,7 +11,7 @@ entity conta is
 		reset	  : in std_logic;
 		enable	  : in std_logic;
 		cout: out std_logic;
-		coutnegado: out std_logic;
+		--coutnegado: out std_logic;
 		q		  : out integer range MIN_COUNT to MAX_COUNT	);
 end entity;
 architecture rtl of conta is
@@ -23,8 +23,8 @@ begin
 			if reset = '1' then
 				cnt := 0;
 			elsif enable = '1' then cnt := cnt + 1;
-				if cnt< max_count/2 then cout<='0'; coutnegado <='1';
-				else cout<='1'; coutnegado <='0';
+				if cnt< max_count/2 then cout<='0'; --coutnegado <='1';
+				else cout<='1'; --coutnegado <='0';
 				end iF;
 				if cnt=MAX_COUNT then cnt:=0; end if;
 			end if;

@@ -9,7 +9,10 @@ port(Clk   	 :   IN  STD_LOGIC;
      oCS_n       :   OUT STD_LOGIC;
      oSCLK       :   OUT STD_LOGIC;
      iDOUT       :   IN  STD_LOGIC;     
-     Led_out :   OUT STD_LOGIC_VECTOR(7 downto 0));
+     Led_out :   OUT STD_LOGIC_VECTOR(7 downto 0);
+
+     pwm_o: out std_logic
+     );
 end entity;
 
 architecture a_SPI_master of SPI_master is
@@ -42,16 +45,31 @@ port ( Clk   : IN  STD_LOGIC;
        );
 end component;
 
+component pwm is
+     generic	(
+		MIN_COUNT : natural := 0;
+        init_pulse: natural := 50000; --50E3 pulsos es 1 ms
+		MAX_COUNT : natural := 1000000); --1E6 pulsos es 20 ms
+	port	(
+		clk		  : in std_logic;
+		reset	  : in std_logic;
+		enable	  : in std_logic;
+		cout: out std_logic;
+		q		  : out integer range MIN_COUNT to MAX_COUNT;
+        duty      : in integer
+        );
+end component;
+
 signal ADC_Data : STD_LOGIC_VECTOR(11 downto 0);
 signal iCH : std_LOGIC_VECTOR (2 downto 0):= "000";
 
 signal clk_adc, clk_read: std_logic:='0';
 signal duty: integer;
 signal iGO: std_logic := '0';
-signal data: std_logic_vector (11 downto 0) := '000000000000';
+signal data: std_logic_vector (11 downto 0) := "000000000000";
 signal aux: integer;
 
-constant resolucion: integer := 50000/4095 * 10000 --cada escalon son 12,21 pulsos del reloj de 50MGhz
+constant resolucion: integer := 50000/4095 * 10000; --cada escalon son 12,21 pulsos del reloj de 50MGhz
 
 begin
 
